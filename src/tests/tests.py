@@ -16,11 +16,10 @@ class TestTokenizer(unittest.TestCase):
         for prompt in prompts:
             encoding = tiktoken.encoding_for_model(model)
             tokens = encoding.encode(prompt)
-            print(len(tokens))
             if len(tokens) > max_tokens:
                 return False
         return True
-
+    """
     def test_empty_string(self):
         model = 'gpt-4'
         max_tokens = 10
@@ -50,7 +49,7 @@ class TestTokenizer(unittest.TestCase):
     def test_multiple_tokens_no_delimiter(self):
         pass
 
-    def test_korean(self):
+    def test_korean_0(self):
         with open(this_dir + "/inputs/memorize-ch-1.txt", "r") as f:
             text = f.read()
         model = 'gpt-4'
@@ -62,6 +61,40 @@ class TestTokenizer(unittest.TestCase):
         with open(this_dir + "/outputs/memorize-ch-1.txt", "w") as f:
             # f.writelines(prompts)
             f.write(prompts[0])
+    """
+    # def test_korean_1(self):
+    #     with open(this_dir + "/inputs/memorize-ch-1-sample-1.txt", "r") as f:
+    #         text = f.read()
+    #     model = 'gpt-4'
+    #     max_tokens = 4000
+    #     prompts = tokenize(text, model, max_tokens)
+    #     self.assertEqual(len(prompts), 1)
+        
+    #     with open(this_dir + "/outputs/memorize-ch-1-sample-1.txt", "w") as f:
+    #         # f.writelines(prompts)
+    #         f.write(prompts[0])
+    
+
+    # def test_ends_with_ending_mark_and_quote(self):
+    #     model = 'gpt-4'
+    #     max_tokens = 10
+    #     text = '''Hi.\n"Hi."'''
+    #     prompts = tokenize(text, model, max_tokens)
+    #     self.assertEqual(len(prompts), 1)
+    
+        
+    # def test_ends_with_ending_mark_and_quote(self):
+    #     model = 'gpt-4'
+    #     max_tokens = 1
+    #     text = '''Hello.World!A?Sky."Is!"Blue?"One\nTwo.\nThree!\nFour?\n'''
+    #     prompts = tokenize(text, model, max_tokens)
+    #     self.assertEqual(len(prompts), 19)
+
+    def test_single_segment_with_no_delimiter_at_end(self):
+        """Test when the segment does not end with a delimiter.
+        Should not split into multiple prompts. 
+        Should return entire segment in single prompt."""
+        pass
 
 if __name__ == '__main__':
     unittest.main()

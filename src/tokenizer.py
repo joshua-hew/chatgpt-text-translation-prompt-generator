@@ -17,14 +17,14 @@ def check_if_token_is_delimiter(token, encoding):
     return False   
     
 
-def tokenize(text, model, max_tokens, match_exact_token_limit=False):
-    """ Returns: array of strings
+def tokenize(text, model, max_tokens):
+    """ Returns: arrays of strings of token size <= max_tokens
     Args:
         text: string
         model: one of []
         max_tokens: int
         match_exact_token_limit: bool
-    Break text into segments that have size < max_tokens.
+    Break text into segments that have size <= max_tokens.
     Each segment should end with a delimiter. If not, find the previous delimiter.
     If no previous delimiter found in segment, then just append entire segment.
     """
@@ -34,7 +34,7 @@ def tokenize(text, model, max_tokens, match_exact_token_limit=False):
 
     start = 0
     end = min(max_tokens, len(tokens))
-    prompts = []
+    text_segments = []
 
     # DEBUG
     print("# tokens", len(tokens))
@@ -48,8 +48,8 @@ def tokenize(text, model, max_tokens, match_exact_token_limit=False):
         delimiter_found = False
         while start < i and not delimiter_found:
             if check_if_token_is_delimiter(tokens[i], encoding):
-                prompt = encoding.decode(tokens[start:i+1])
-                prompts.append(prompt)
+                segment = encoding.decode(tokens[start:i+1])
+                text_segments.append(segment)
                 
                 start = i+1
                 end = min(start + max_tokens, len(tokens))
@@ -58,13 +58,40 @@ def tokenize(text, model, max_tokens, match_exact_token_limit=False):
                 i -= 1
 
         if not delimiter_found:
-            prompt = encoding.decode(tokens[start:end])
-            prompts.append(prompt)
+            segment = encoding.decode(tokens[start:end])
+            text_segments.append(segment)
 
             start = end
             end = min(start + max_tokens, len(tokens))
 
+    return text_segments
+
+
+def generate_prompts(prompt_prefix, text, model, prompt_token_limit):
+    """Generates the prompts that can be copied / pasted into ChatGPT web."""
+    
+    # Append \n to prompt_prefix if not present already
+    pass
+
+    # Count tokens in prompt_prefix
+    encoding = tiktoken.encoding_for_model(model)
+    tokens = encoding.encode(prompt_prefix)
+    
+    # Subtract from prompt_token_limit
+    segment_token_limit = prompt_token_limit - len(tokens)
+
+    # Error handling: check that max_tokens is longer than prompt_prefix tokens
+    pass
+
+    # Split texts into segments
+    segments = tokenize(text, model, segment_token_limit)
+
+    # Prepend prefix to each segment to form the final prompt
+    prompts = [prompt_prefix + x for x in segments]
     return prompts
+
+
+
 
 if __name__ == "__main__":
     pass

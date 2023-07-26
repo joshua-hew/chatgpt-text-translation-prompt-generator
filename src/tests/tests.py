@@ -8,17 +8,20 @@ this_dir = os.path.dirname(os.path.realpath(__file__))
 parent_dir = os.path.dirname(this_dir)
 sys.path.append(parent_dir)
 
-from tokenizer import tokenize
+from tokenizer import tokenize, generate_prompts
+
+def validate_token_size(segments, model, max_tokens):
+    for segment in segments:
+        encoding = tiktoken.encoding_for_model(model)
+        tokens = encoding.encode(segment)
+        print("Num tokens:", len(tokens))
+        if len(tokens) > max_tokens:
+            return False
+    return True
 
 class TestTokenizer(unittest.TestCase):
 
-    def validate_prompt_sizes(self, prompts, model, max_tokens):
-        for prompt in prompts:
-            encoding = tiktoken.encoding_for_model(model)
-            tokens = encoding.encode(prompt)
-            if len(tokens) > max_tokens:
-                return False
-        return True
+    
     """
     def test_empty_string(self):
         model = 'gpt-4'
@@ -94,6 +97,27 @@ class TestTokenizer(unittest.TestCase):
         """Test when the segment does not end with a delimiter.
         Should not split into multiple prompts. 
         Should return entire segment in single prompt."""
+        pass
+
+class TestPromptGenerator(unittest.TestCase):
+
+    def test_prompt_size_less_than_token_limit(self):
+        pass
+
+    def test_large_text_one(self):
+        prompt_token_limit = 3500
+        with open(this_dir + "/inputs/memorize-ch-1.txt", "r") as f:
+            text = f.read()
+        
+        prompts = generate_prompts("Translate this to english:\n", text, 'gpt-4', prompt_token_limit)
+        with open(this_dir + "/outputs/test_large_text_one.txt", "w") as f:
+            # f.writelines(prompts)
+            f.write(prompts[0])
+
+        self.assertTrue(validate_token_size(prompts, 'gpt-4', prompt_token_limit))
+
+    def test_prompt_prefix_size(self):
+        """Test that an error is thrown when the prompt prefix token size >= prompt token limit."""
         pass
 
 if __name__ == '__main__':

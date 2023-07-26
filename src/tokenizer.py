@@ -37,10 +37,10 @@ def tokenize(text, model, max_tokens):
     text_segments = []
 
     # DEBUG
-    print("# tokens", len(tokens))
-    print("tokens", tokens)
-    for token in tokens:
-        print(token, repr(encoding.decode([token])))
+    # print("# tokens", len(tokens))
+    # print("tokens", tokens)
+    # for token in tokens:
+    #     print(token, repr(encoding.decode([token])))
 
     while start < len(tokens):
         

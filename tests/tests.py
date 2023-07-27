@@ -104,13 +104,13 @@ class TestPromptGenerator(unittest.TestCase):
     def test_prompt_size_less_than_token_limit(self):
         pass
 
-    def test_large_text_one(self):
-        prompt_token_limit = 3500
+    def test_large_text_0(self):
+        prompt_token_limit = 2700
         with open(this_dir + "/inputs/memorize-ch-1.txt", "r") as f:
             text = f.read()
         
         prompts = generate_prompts("Translate this to english:\n", text, 'gpt-4', prompt_token_limit)
-        with open(this_dir + "/outputs/test_large_text_one.txt", "w") as f:
+        with open(this_dir + "/outputs/test_large_text_0.txt", "w") as f:
             # f.writelines(prompts)
             f.write(prompts[0])
 
@@ -119,6 +119,13 @@ class TestPromptGenerator(unittest.TestCase):
     def test_prompt_prefix_size(self):
         """Test that an error is thrown when the prompt prefix token size >= prompt token limit."""
         pass
+
+    def test_count_tokens(self):
+        with open(this_dir + '/inputs/count_tokens.txt', 'r') as f:
+            text = f.read()
+        encoding = tiktoken.encoding_for_model('gpt-4')
+        tokens = encoding.encode(text)
+        print("count tokens", len(tokens))
 
 if __name__ == '__main__':
     unittest.main()

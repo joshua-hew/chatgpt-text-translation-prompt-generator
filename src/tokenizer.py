@@ -68,7 +68,7 @@ def tokenize(text, model, max_tokens):
 
 
 def generate_prompts(prompt_prefix, text, model, prompt_token_limit):
-    """Generates the prompts that can be copied / pasted into ChatGPT web."""
+    """Generates the prompts that can be copied / pasted into the ChatGPT web interface."""
     
     # Append \n to prompt_prefix if not present already
     pass

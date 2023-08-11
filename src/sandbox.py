@@ -1,5 +1,5 @@
 import os
-from tokenizer import generate_prompts
+from utils import generate_prompts
 
 # TODO
 # Pivot back towards using this as a local automation script.
@@ -36,7 +36,7 @@ def main():
         with open(OUTPUT_DIR + f"natural-{i}.txt", "w") as f:
             f.write(natural_translation_prompts[i])
     
-
+    
 
 
 if __name__ == '__main__':

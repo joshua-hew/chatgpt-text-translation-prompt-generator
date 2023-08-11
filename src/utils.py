@@ -1,4 +1,9 @@
+import os
 import tiktoken
+
+def list_txt_files(directory):
+    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith('.txt')]
+
 
 def check_if_token_is_delimiter(token, encoding):
     """Returns bool
@@ -17,7 +22,7 @@ def check_if_token_is_delimiter(token, encoding):
     return False   
     
 
-def tokenize(text, model, max_tokens):
+def split_text(text, model, max_tokens):
     """ Returns: arrays of strings of token size <= max_tokens
     Args:
         text: string
@@ -84,13 +89,16 @@ def generate_prompts(prompt_prefix, text, model, prompt_token_limit):
     pass
 
     # Split texts into segments
-    segments = tokenize(text, model, segment_token_limit)
+    segments = split_text(text, model, segment_token_limit)
 
     # Prepend prefix to each segment to form the final prompt
     prompts = [prompt_prefix + x for x in segments]
     return prompts
 
 
+def translate():
+    """Sends API call to ChatGPT to translate the text."""
+    pass
 
 
 if __name__ == "__main__":

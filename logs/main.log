@@ -1,0 +1,24 @@
+2023-08-16 23:57:27,066 - what? - INFO - Creating input prompts. Model: gpt-3.5-turbo. Prompt token limit: 2048
+2023-08-16 23:57:32,235 - what? - INFO - Finished creating input prompts.
+2023-08-16 23:57:32,235 - what? - INFO - Starting translation. Book range: 1 - 41. Prompt start: None
+2023-08-16 23:57:32,235 - what? - INFO - Translating: /Users/josh/Local Documents/Novels/Memorize/GPT-4 Input Prompts/Book-1/translation-prompt-00.txt
+2023-08-16 23:58:01,061 - what? - INFO - Response: {
+  "id": "chatcmpl-7oOQWVexNrZXy0Yoi9k3fFb6u5SG5",
+  "object": "chat.completion",
+  "created": 1692244652,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2042,
+    "completion_tokens": 945,
+    "total_tokens": 2987
+  }
+}

@@ -1,4 +1,5 @@
 import os
+import openai
 import tiktoken
 
 def list_txt_files(directory):
@@ -96,9 +97,20 @@ def generate_prompts(prompt_prefix, text, model, prompt_token_limit):
     return prompts
 
 
-def translate():
+def translate(model, prompt):
     """Sends API call to ChatGPT to translate the text."""
-    pass
+    
+    # TODO: look into model parameters
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0,
+    )
+
+    return response
 
 
 if __name__ == "__main__":

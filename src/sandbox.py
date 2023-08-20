@@ -1,5 +1,5 @@
 import os
-from utils import generate_prompts
+from openai_utils import generate_prompts
 
 # TODO
 # Pivot back towards using this as a local automation script.

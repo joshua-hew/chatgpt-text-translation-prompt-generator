@@ -2,10 +2,6 @@ import os
 import openai
 import tiktoken
 
-def list_txt_files(directory):
-    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith('.txt')]
-
-
 def check_if_token_is_delimiter(token, encoding):
     """Returns bool
     Basially, we want to split up text according to a delimiter so that we do not cut a multi-token in half by accident.

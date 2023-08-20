@@ -1,10 +1,19 @@
 import os
-import copy
+import json
 import shutil
-import openai
 import logging
-from utils import *
+from openai_utils import *
 
+BOOK_RANGE = list(range(1, 42)) # 41 books, so 42 is the end range
+NOVEL_RAWS_DIR = '/Users/josh/Local Documents/Novels/Memorize/Raws/'
+GPT_INPUT_DIR = '/Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-{}/'
+GPT_OUTPUT_DIR = '/Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-{}/'
+FINAL_OUTPUT_DIR = '/Users/josh/Local Documents/Novels/Memorize/Translated/Book-{}/'
+# MODEL = 'gpt-4'
+MODEL = 'gpt-3.5-turbo'
+MAX_PROMPT_TOKENS = 2048
+
+# Create logger
 logger = logging.getLogger('GPT-Translator')
 logger.setLevel(logging.DEBUG)
 
@@ -25,25 +34,25 @@ logger.addHandler(c_handler)
 logger.addHandler(f_handler)
 
 
-def main():
-    """Iterates through each book in the Memorize novel, creates the prompts, sends api calls to ChatGPT for translation, and stitches translations together."""
-    
-    NOVEL_RAWS_DIR = '/Users/josh/Local Documents/Novels/Memorize/Raws/'
-    GPT_INPUT_DIR = '/Users/josh/Local Documents/Novels/Memorize/GPT-4 Input Prompts/Book-{}/'
-    GPT_OUTPUT_DIR = '/Users/josh/Local Documents/Novels/Memorize/GPT-4 Output Responses/Book-{}/'
-    # MODEL = 'gpt-4'
-    MODEL = 'gpt-3.5-turbo'
-    MAX_PROMPT_TOKENS = 2048
- 
+def reset_directory(dir_path):
+    logger.info(f"Resetting directory: {dir_path}")
+    if os.path.exists(dir_path):
+        shutil.rmtree(dir_path, ignore_errors=True)
+    os.makedirs(dir_path)
+
+
+def list_txt_files(directory):
+    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith('.txt')]
+
+
+def create_prompt_files():
     # Create prompts for each book
     logger.info(f"Creating input prompts. Model: {MODEL}. Prompt token limit: {MAX_PROMPT_TOKENS}")
-    for book_num in range(1, 42):
+    for book_num in BOOK_RANGE:
         
         # Wipe input prompt dir of previous contents
         prompts_dir = GPT_INPUT_DIR.format(book_num)
-        if os.path.exists(prompts_dir):
-            shutil.rmtree(prompts_dir, ignore_errors=True)
-        os.makedirs(prompts_dir)
+        reset_directory(prompts_dir)
 
         # Create prompts
         with open(NOVEL_RAWS_DIR + f'메모라이즈-{book_num}권.txt', 'r') as f:
@@ -58,26 +67,22 @@ def main():
     
     logger.info(f"Finished creating input prompts")
 
-    ####################
-    # Translate
-    ####################
-    # In case of failure, manually define a start / continue point
-    # TODO: Test resuming from a random book, file
-    book_range = range(1, 42)
-    prompt_start = None     # Name of input prompt file
 
-    for book_num in book_range:
+def create_translation_files():
+    """Translates each prompt via ChatGPT"""
+
+    for book_num in BOOK_RANGE:
+        # Wipe input prompt dir of previous contents
+        translation_outputs_dir = GPT_OUTPUT_DIR.format(book_num)
+        reset_directory(translation_outputs_dir)
+        
         logger.info(f"Starting translation: Book {book_num}")
         prompts_dir = GPT_INPUT_DIR.format(book_num)
         prompt_files = sorted(list_txt_files(prompts_dir))
-
-        if prompt_start:
-            start_index = prompt_files.index(prompt_start)
-            prompt_files = prompt_files[start_index:]
    
         # Call ChatGPT API. Translate each prompt
         for i in range(len(prompt_files)):
-            logger.info(f"Translating: {prompt_files[i]}")
+            logger.info(f"Translating: {prompt_files[i].split('/')[-1]}")
             with open(prompt_files[i], 'r') as f:
                 prompt = f.read()
 
@@ -87,9 +92,11 @@ def main():
             except Exception as e:
                 logger.error("Error translating text.", e)
 
-            r_metadata = copy.deepcopy(response)
-            r_metadata["choices"][0]["message"].pop("content")
-            logger.info(f"Response: {r_metadata}")
+            r_metadata = {}
+            r_metadata["finish_reason"] = response["choices"][0]["finish_reason"]
+            r_metadata["usage"] = response["usage"]
+            r_metadata["usage"]["completion_over_prompt_%"] = f'{100 * r_metadata["usage"]["completion_tokens"] / r_metadata["usage"]["prompt_tokens"]}'
+            logger.info(f"Response: {json.dumps(r_metadata)}")
 
 
             # Validate that translation was not curtailed
@@ -105,32 +112,63 @@ def main():
                 
                 logger.warning(f"Incomplete response received. Retrying. Retry attempt: {retry_counter}")
                 
-                response = translate(MODEL, prompt)
-                r_metadata = copy.deepcopy(response)
-                r_metadata["choices"][0]["message"].pop("content")
-                logger.info(f"Response: {r_metadata}")
+                try:
+                    response = translate(MODEL, prompt)
+
+                except Exception as e:
+                    logger.error("Error translating text.", e)
+
+                r_metadata = {}
+                r_metadata["finish_reason"] = response["choices"][0]["finish_reason"]
+                r_metadata["usage"] = response["usage"]
+                r_metadata["usage"]["completion_over_prompt_%"] = f'{100 * r_metadata["usage"]["completion_tokens"] / r_metadata["usage"]["prompt_tokens"]}'
+                logger.info(f"Response: {json.dumps(r_metadata)}")
                 
                 finish_reason = response["choices"][0]["finish_reason"]
                 retry_counter += 1
 
-            # Wipe input prompt dir of previous contents
-            translation_outputs_dir = GPT_OUTPUT_DIR.format(book_num)
-            if os.path.exists(translation_outputs_dir):
-                shutil.rmtree(translation_outputs_dir, ignore_errors=True)
-            os.makedirs(translation_outputs_dir)
-
             # Write translation to file
+            translation_file = translation_outputs_dir + f"translation-output-{i:02d}.txt"
+            logger.info(f"Saving translation to {translation_file}")
             translation = response_content.split("==START==\n", 1)[1]
-            with open(translation_outputs_dir + f"translation-output-{i:02d}.txt", "w") as f:
+            with open(translation_file, "w") as f:
                 f.write(translation)
 
             # DEBUG - stop after first prompt
-            break
-        
+            # break
+
         # DEBUG - stop after first book
         break
+
+
+def create_final_book_files():
+    """Stitch translations together"""
+
+    for book_num in BOOK_RANGE:
+        # Wipe input prompt dir of previous contents
+        book_dir = FINAL_OUTPUT_DIR.format(book_num)
+        reset_directory(book_dir)
+        
+        logger.info(f"Stitching together translations: Book {book_num}") 
+        translation_files = sorted(list_txt_files(GPT_OUTPUT_DIR.format(book_num)))
+        with open(book_dir + f"Memorize Book {book_num}.txt", "w") as book_file:
+            
+            for i in range(len(translation_files)):
+                logger.info(f"Appending translation: {translation_files[i].split('/')[-1]}")
+                with open(translation_files[i], "r") as f:
+                    text = f.read()
+                    book_file.write(text)
+
+
+def main():
+    """Iterates through each book in the Memorize novel, creates the prompts, sends api calls to ChatGPT for translation, and stitches translations together."""
     
-    # Stitch together translations
+    logger.info(f"Running {__name__}")
+    # create_prompt_files()
+    # create_translation_files
+    create_final_book_files()
+    logger.info("Done!")
+
 
 if __name__ == '__main__':
     main()

@@ -1,24 +1,263 @@
-2023-08-16 23:57:27,066 - what? - INFO - Creating input prompts. Model: gpt-3.5-turbo. Prompt token limit: 2048
-2023-08-16 23:57:32,235 - what? - INFO - Finished creating input prompts.
-2023-08-16 23:57:32,235 - what? - INFO - Starting translation. Book range: 1 - 41. Prompt start: None
-2023-08-16 23:57:32,235 - what? - INFO - Translating: /Users/josh/Local Documents/Novels/Memorize/GPT-4 Input Prompts/Book-1/translation-prompt-00.txt
-2023-08-16 23:58:01,061 - what? - INFO - Response: {
-  "id": "chatcmpl-7oOQWVexNrZXy0Yoi9k3fFb6u5SG5",
-  "object": "chat.completion",
-  "created": 1692244652,
-  "model": "gpt-3.5-turbo-0613",
-  "choices": [
-    {
-      "index": 0,
-      "message": {
-        "role": "assistant"
-      },
-      "finish_reason": "stop"
-    }
-  ],
-  "usage": {
-    "prompt_tokens": 2042,
-    "completion_tokens": 945,
-    "total_tokens": 2987
-  }
-}
+2023-08-20 13:55:58,281 - GPT-Translator - INFO - Running __main__
+2023-08-20 13:55:58,281 - GPT-Translator - INFO - Creating input prompts. Model: gpt-3.5-turbo. Prompt token limit: 2048
+2023-08-20 13:55:58,281 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-1/
+2023-08-20 13:55:58,573 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-2/
+2023-08-20 13:55:58,729 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-3/
+2023-08-20 13:55:58,884 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-4/
+2023-08-20 13:55:59,049 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-5/
+2023-08-20 13:55:59,210 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-6/
+2023-08-20 13:55:59,373 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-7/
+2023-08-20 13:55:59,555 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-8/
+2023-08-20 13:55:59,726 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-9/
+2023-08-20 13:55:59,907 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-10/
+2023-08-20 13:56:00,090 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-11/
+2023-08-20 13:56:00,273 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-12/
+2023-08-20 13:56:00,464 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-13/
+2023-08-20 13:56:00,644 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-14/
+2023-08-20 13:56:00,844 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-15/
+2023-08-20 13:56:01,041 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-16/
+2023-08-20 13:56:01,244 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-17/
+2023-08-20 13:56:01,434 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-18/
+2023-08-20 13:56:01,617 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-19/
+2023-08-20 13:56:01,801 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-20/
+2023-08-20 13:56:02,003 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-21/
+2023-08-20 13:56:02,189 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-22/
+2023-08-20 13:56:02,378 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-23/
+2023-08-20 13:56:02,573 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-24/
+2023-08-20 13:56:02,766 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-25/
+2023-08-20 13:56:02,959 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-26/
+2023-08-20 13:56:03,146 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-27/
+2023-08-20 13:56:03,353 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-28/
+2023-08-20 13:56:03,544 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-29/
+2023-08-20 13:56:03,752 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-30/
+2023-08-20 13:56:03,939 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-31/
+2023-08-20 13:56:04,149 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-32/
+2023-08-20 13:56:04,352 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-33/
+2023-08-20 13:56:04,538 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-34/
+2023-08-20 13:56:04,736 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-35/
+2023-08-20 13:56:04,940 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-36/
+2023-08-20 13:56:05,140 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-37/
+2023-08-20 13:56:05,326 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-38/
+2023-08-20 13:56:05,496 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-39/
+2023-08-20 13:56:05,708 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-40/
+2023-08-20 13:56:05,910 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Input Prompts/Book-41/
+2023-08-20 13:56:06,101 - GPT-Translator - INFO - Finished creating input prompts
+2023-08-20 13:56:06,101 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/
+2023-08-20 13:56:06,101 - GPT-Translator - INFO - Starting translation: Book 1
+2023-08-20 13:56:06,101 - GPT-Translator - INFO - Translating: translation-prompt-00.txt
+2023-08-20 13:56:23,073 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2042, "completion_tokens": 941, "total_tokens": 2983, "completion_over_prompt_%": "46.082272282076396"}}
+2023-08-20 13:56:23,073 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-00.txt
+2023-08-20 13:56:23,073 - GPT-Translator - INFO - Translating: translation-prompt-01.txt
+2023-08-20 13:56:35,923 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2063, "completion_tokens": 758, "total_tokens": 2821, "completion_over_prompt_%": "36.74260785264178"}}
+2023-08-20 13:56:35,923 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-01.txt
+2023-08-20 13:56:35,923 - GPT-Translator - INFO - Translating: translation-prompt-02.txt
+2023-08-20 13:56:51,384 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2052, "completion_tokens": 891, "total_tokens": 2943, "completion_over_prompt_%": "43.421052631578945"}}
+2023-08-20 13:56:51,384 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-02.txt
+2023-08-20 13:56:51,385 - GPT-Translator - INFO - Translating: translation-prompt-03.txt
+2023-08-20 13:57:07,872 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2053, "completion_tokens": 925, "total_tokens": 2978, "completion_over_prompt_%": "45.05601558694593"}}
+2023-08-20 13:57:07,872 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-03.txt
+2023-08-20 13:57:07,872 - GPT-Translator - INFO - Translating: translation-prompt-04.txt
+2023-08-20 13:57:23,535 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2042, "completion_tokens": 908, "total_tokens": 2950, "completion_over_prompt_%": "44.46620959843291"}}
+2023-08-20 13:57:23,535 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-04.txt
+2023-08-20 13:57:23,536 - GPT-Translator - INFO - Translating: translation-prompt-05.txt
+2023-08-20 13:57:39,991 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2053, "completion_tokens": 885, "total_tokens": 2938, "completion_over_prompt_%": "43.10764734534827"}}
+2023-08-20 13:57:39,992 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-05.txt
+2023-08-20 13:57:39,992 - GPT-Translator - INFO - Translating: translation-prompt-06.txt
+2023-08-20 13:57:53,749 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2003, "completion_tokens": 832, "total_tokens": 2835, "completion_over_prompt_%": "41.537693459810285"}}
+2023-08-20 13:57:53,749 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-06.txt
+2023-08-20 13:57:53,750 - GPT-Translator - INFO - Translating: translation-prompt-07.txt
+2023-08-20 13:58:09,110 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2049, "completion_tokens": 904, "total_tokens": 2953, "completion_over_prompt_%": "44.119082479258175"}}
+2023-08-20 13:58:09,110 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-07.txt
+2023-08-20 13:58:09,111 - GPT-Translator - INFO - Translating: translation-prompt-08.txt
+2023-08-20 13:58:22,973 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2020, "completion_tokens": 844, "total_tokens": 2864, "completion_over_prompt_%": "41.78217821782178"}}
+2023-08-20 13:58:22,973 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-08.txt
+2023-08-20 13:58:22,974 - GPT-Translator - INFO - Translating: translation-prompt-09.txt
+2023-08-20 13:58:39,445 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2021, "completion_tokens": 916, "total_tokens": 2937, "completion_over_prompt_%": "45.32409698169223"}}
+2023-08-20 13:58:39,445 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-09.txt
+2023-08-20 13:58:39,446 - GPT-Translator - INFO - Translating: translation-prompt-10.txt
+2023-08-20 13:58:54,933 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2017, "completion_tokens": 888, "total_tokens": 2905, "completion_over_prompt_%": "44.025780862667325"}}
+2023-08-20 13:58:54,933 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-10.txt
+2023-08-20 13:58:54,934 - GPT-Translator - INFO - Translating: translation-prompt-11.txt
+2023-08-20 13:59:12,556 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2060, "completion_tokens": 925, "total_tokens": 2985, "completion_over_prompt_%": "44.90291262135922"}}
+2023-08-20 13:59:12,556 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-11.txt
+2023-08-20 13:59:12,557 - GPT-Translator - INFO - Translating: translation-prompt-12.txt
+2023-08-20 13:59:28,064 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2049, "completion_tokens": 839, "total_tokens": 2888, "completion_over_prompt_%": "40.94680331869205"}}
+2023-08-20 13:59:28,064 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-12.txt
+2023-08-20 13:59:28,064 - GPT-Translator - INFO - Translating: translation-prompt-13.txt
+2023-08-20 13:59:42,807 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2064, "completion_tokens": 873, "total_tokens": 2937, "completion_over_prompt_%": "42.29651162790697"}}
+2023-08-20 13:59:42,807 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-13.txt
+2023-08-20 13:59:42,807 - GPT-Translator - INFO - Translating: translation-prompt-14.txt
+2023-08-20 13:59:58,664 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2054, "completion_tokens": 949, "total_tokens": 3003, "completion_over_prompt_%": "46.20253164556962"}}
+2023-08-20 13:59:58,665 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-14.txt
+2023-08-20 13:59:58,665 - GPT-Translator - INFO - Translating: translation-prompt-15.txt
+2023-08-20 14:00:15,367 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2057, "completion_tokens": 901, "total_tokens": 2958, "completion_over_prompt_%": "43.80165289256198"}}
+2023-08-20 14:00:15,367 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-15.txt
+2023-08-20 14:00:15,368 - GPT-Translator - INFO - Translating: translation-prompt-16.txt
+2023-08-20 14:00:27,633 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2037, "completion_tokens": 975, "total_tokens": 3012, "completion_over_prompt_%": "47.864506627393226"}}
+2023-08-20 14:00:27,633 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-16.txt
+2023-08-20 14:00:27,633 - GPT-Translator - INFO - Translating: translation-prompt-17.txt
+2023-08-20 14:00:49,266 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2017, "completion_tokens": 900, "total_tokens": 2917, "completion_over_prompt_%": "44.62072384729797"}}
+2023-08-20 14:00:49,266 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-17.txt
+2023-08-20 14:00:49,267 - GPT-Translator - INFO - Translating: translation-prompt-18.txt
+2023-08-20 14:01:12,306 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2061, "completion_tokens": 911, "total_tokens": 2972, "completion_over_prompt_%": "44.20184376516254"}}
+2023-08-20 14:01:12,306 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-18.txt
+2023-08-20 14:01:12,307 - GPT-Translator - INFO - Translating: translation-prompt-19.txt
+2023-08-20 14:01:28,613 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2046, "completion_tokens": 906, "total_tokens": 2952, "completion_over_prompt_%": "44.28152492668622"}}
+2023-08-20 14:01:28,613 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-19.txt
+2023-08-20 14:01:28,614 - GPT-Translator - INFO - Translating: translation-prompt-20.txt
+2023-08-20 14:01:45,131 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2020, "completion_tokens": 900, "total_tokens": 2920, "completion_over_prompt_%": "44.554455445544555"}}
+2023-08-20 14:01:45,131 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-20.txt
+2023-08-20 14:01:45,131 - GPT-Translator - INFO - Translating: translation-prompt-21.txt
+2023-08-20 14:02:03,348 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2035, "completion_tokens": 1040, "total_tokens": 3075, "completion_over_prompt_%": "51.105651105651106"}}
+2023-08-20 14:02:03,348 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-21.txt
+2023-08-20 14:02:03,348 - GPT-Translator - INFO - Translating: translation-prompt-22.txt
+2023-08-20 14:02:19,112 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2043, "completion_tokens": 847, "total_tokens": 2890, "completion_over_prompt_%": "41.45863925599608"}}
+2023-08-20 14:02:19,112 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-22.txt
+2023-08-20 14:02:19,112 - GPT-Translator - INFO - Translating: translation-prompt-23.txt
+2023-08-20 14:02:35,174 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2040, "completion_tokens": 922, "total_tokens": 2962, "completion_over_prompt_%": "45.19607843137255"}}
+2023-08-20 14:02:35,175 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-23.txt
+2023-08-20 14:02:35,175 - GPT-Translator - INFO - Translating: translation-prompt-24.txt
+2023-08-20 14:02:51,739 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2037, "completion_tokens": 919, "total_tokens": 2956, "completion_over_prompt_%": "45.11536573392244"}}
+2023-08-20 14:02:51,740 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-24.txt
+2023-08-20 14:02:51,740 - GPT-Translator - INFO - Translating: translation-prompt-25.txt
+2023-08-20 14:03:08,644 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2028, "completion_tokens": 978, "total_tokens": 3006, "completion_over_prompt_%": "48.22485207100592"}}
+2023-08-20 14:03:08,644 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-25.txt
+2023-08-20 14:03:08,645 - GPT-Translator - INFO - Translating: translation-prompt-26.txt
+2023-08-20 14:03:26,451 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2059, "completion_tokens": 976, "total_tokens": 3035, "completion_over_prompt_%": "47.40165128703254"}}
+2023-08-20 14:03:26,451 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-26.txt
+2023-08-20 14:03:26,452 - GPT-Translator - INFO - Translating: translation-prompt-27.txt
+2023-08-20 14:03:40,584 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2031, "completion_tokens": 796, "total_tokens": 2827, "completion_over_prompt_%": "39.19251600196947"}}
+2023-08-20 14:03:40,584 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-27.txt
+2023-08-20 14:03:40,585 - GPT-Translator - INFO - Translating: translation-prompt-28.txt
+2023-08-20 14:03:58,199 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2045, "completion_tokens": 922, "total_tokens": 2967, "completion_over_prompt_%": "45.085574572127136"}}
+2023-08-20 14:03:58,199 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-28.txt
+2023-08-20 14:03:58,199 - GPT-Translator - INFO - Translating: translation-prompt-29.txt
+2023-08-20 14:04:05,175 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2054, "completion_tokens": 427, "total_tokens": 2481, "completion_over_prompt_%": "20.788704965920157"}}
+2023-08-20 14:04:05,175 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-29.txt
+2023-08-20 14:04:05,175 - GPT-Translator - INFO - Translating: translation-prompt-30.txt
+2023-08-20 14:04:22,059 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2055, "completion_tokens": 832, "total_tokens": 2887, "completion_over_prompt_%": "40.48661800486618"}}
+2023-08-20 14:04:22,060 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-30.txt
+2023-08-20 14:04:22,060 - GPT-Translator - INFO - Translating: translation-prompt-31.txt
+2023-08-20 14:04:39,767 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2051, "completion_tokens": 887, "total_tokens": 2938, "completion_over_prompt_%": "43.24719648951731"}}
+2023-08-20 14:04:39,767 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-31.txt
+2023-08-20 14:04:39,767 - GPT-Translator - INFO - Translating: translation-prompt-32.txt
+2023-08-20 14:04:53,790 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2052, "completion_tokens": 886, "total_tokens": 2938, "completion_over_prompt_%": "43.17738791423002"}}
+2023-08-20 14:04:53,790 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-32.txt
+2023-08-20 14:04:53,790 - GPT-Translator - INFO - Translating: translation-prompt-33.txt
+2023-08-20 14:05:08,343 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2014, "completion_tokens": 828, "total_tokens": 2842, "completion_over_prompt_%": "41.112214498510426"}}
+2023-08-20 14:05:08,343 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-33.txt
+2023-08-20 14:05:08,344 - GPT-Translator - INFO - Translating: translation-prompt-34.txt
+2023-08-20 14:05:25,034 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2045, "completion_tokens": 867, "total_tokens": 2912, "completion_over_prompt_%": "42.396088019559905"}}
+2023-08-20 14:05:25,035 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-34.txt
+2023-08-20 14:05:25,035 - GPT-Translator - INFO - Translating: translation-prompt-35.txt
+2023-08-20 14:05:39,783 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2061, "completion_tokens": 897, "total_tokens": 2958, "completion_over_prompt_%": "43.522561863173216"}}
+2023-08-20 14:05:39,783 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-35.txt
+2023-08-20 14:05:39,783 - GPT-Translator - INFO - Translating: translation-prompt-36.txt
+2023-08-20 14:05:55,348 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2046, "completion_tokens": 890, "total_tokens": 2936, "completion_over_prompt_%": "43.499511241446726"}}
+2023-08-20 14:05:55,349 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-36.txt
+2023-08-20 14:05:55,349 - GPT-Translator - INFO - Translating: translation-prompt-37.txt
+2023-08-20 14:06:07,958 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2058, "completion_tokens": 744, "total_tokens": 2802, "completion_over_prompt_%": "36.15160349854227"}}
+2023-08-20 14:06:07,958 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-37.txt
+2023-08-20 14:06:07,959 - GPT-Translator - INFO - Translating: translation-prompt-38.txt
+2023-08-20 14:06:27,604 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2026, "completion_tokens": 898, "total_tokens": 2924, "completion_over_prompt_%": "44.323790720631784"}}
+2023-08-20 14:06:27,604 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-38.txt
+2023-08-20 14:06:27,605 - GPT-Translator - INFO - Translating: translation-prompt-39.txt
+2023-08-20 14:06:46,342 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 2044, "completion_tokens": 989, "total_tokens": 3033, "completion_over_prompt_%": "48.385518590998046"}}
+2023-08-20 14:06:46,342 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-39.txt
+2023-08-20 14:06:46,343 - GPT-Translator - INFO - Translating: translation-prompt-40.txt
+2023-08-20 14:06:47,468 - GPT-Translator - INFO - Response: {"finish_reason": "stop", "usage": {"prompt_tokens": 420, "completion_tokens": 40, "total_tokens": 460, "completion_over_prompt_%": "9.523809523809524"}}
+2023-08-20 14:06:47,468 - GPT-Translator - INFO - Saving translation to /Users/josh/Local Documents/Novels/Memorize/ChatGPT Output Responses/Book-1/translation-output-40.txt
+2023-08-20 14:06:47,469 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/Translated/Book-1/
+2023-08-20 14:06:47,469 - GPT-Translator - INFO - Stitching together translations: Book 1
+2023-08-20 14:20:40,648 - GPT-Translator - INFO - Running __main__
+2023-08-20 14:20:40,649 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/Translated/Book-1/
+2023-08-20 14:20:40,649 - GPT-Translator - INFO - Stitching together translations: Book 1
+2023-08-20 14:20:40,649 - GPT-Translator - INFO - Appending translation: translation-output-00.txt
+2023-08-20 14:20:40,649 - GPT-Translator - INFO - Appending translation: translation-output-01.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-02.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-03.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-04.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-05.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-06.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-07.txt
+2023-08-20 14:20:40,650 - GPT-Translator - INFO - Appending translation: translation-output-08.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-09.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-10.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-11.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-12.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-13.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-14.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-15.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-16.txt
+2023-08-20 14:20:40,651 - GPT-Translator - INFO - Appending translation: translation-output-17.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-18.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-19.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-20.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-21.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-22.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-23.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-24.txt
+2023-08-20 14:20:40,652 - GPT-Translator - INFO - Appending translation: translation-output-25.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-26.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-27.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-28.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-29.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-30.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-31.txt
+2023-08-20 14:20:40,653 - GPT-Translator - INFO - Appending translation: translation-output-32.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-33.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-34.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-35.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-36.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-37.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-38.txt
+2023-08-20 14:20:40,654 - GPT-Translator - INFO - Appending translation: translation-output-39.txt
+2023-08-20 14:20:40,655 - GPT-Translator - INFO - Appending translation: translation-output-40.txt
+2023-08-20 14:20:40,655 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/Translated/Book-2/
+2023-08-20 14:20:40,655 - GPT-Translator - INFO - Stitching together translations: Book 2
+2023-08-20 14:23:18,369 - GPT-Translator - INFO - Running __main__
+2023-08-20 14:23:18,370 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/Translated/Book-1/
+2023-08-20 14:23:18,370 - GPT-Translator - INFO - Stitching together translations: Book 1
+2023-08-20 14:23:18,370 - GPT-Translator - INFO - Appending translation: translation-output-00.txt
+2023-08-20 14:23:18,370 - GPT-Translator - INFO - Appending translation: translation-output-01.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-02.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-03.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-04.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-05.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-06.txt
+2023-08-20 14:23:18,371 - GPT-Translator - INFO - Appending translation: translation-output-07.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-08.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-09.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-10.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-11.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-12.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-13.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-14.txt
+2023-08-20 14:23:18,372 - GPT-Translator - INFO - Appending translation: translation-output-15.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-16.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-17.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-18.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-19.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-20.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-21.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-22.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-23.txt
+2023-08-20 14:23:18,373 - GPT-Translator - INFO - Appending translation: translation-output-24.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-25.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-26.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-27.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-28.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-29.txt
+2023-08-20 14:23:18,374 - GPT-Translator - INFO - Appending translation: translation-output-30.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-31.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-32.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-33.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-34.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-35.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-36.txt
+2023-08-20 14:23:18,375 - GPT-Translator - INFO - Appending translation: translation-output-37.txt
+2023-08-20 14:23:18,376 - GPT-Translator - INFO - Appending translation: translation-output-38.txt
+2023-08-20 14:23:18,376 - GPT-Translator - INFO - Appending translation: translation-output-39.txt
+2023-08-20 14:23:18,376 - GPT-Translator - INFO - Appending translation: translation-output-40.txt
+2023-08-20 14:23:18,376 - GPT-Translator - INFO - Resetting directory: /Users/josh/Local Documents/Novels/Memorize/Translated/Book-2/
+2023-08-20 14:23:18,376 - GPT-Translator - INFO - Stitching together translations: Book 2
